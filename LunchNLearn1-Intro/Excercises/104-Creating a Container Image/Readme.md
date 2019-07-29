@@ -78,7 +78,8 @@ cd myContainer
     ```
 
     To get the address of the Docker host, exit the container ([CNTRL+P+Q]) and
-    issue the following command.
+    issue the following command. The IP address of your VM is on the eth0
+    interface.
 
     ```docker
     ip addr sho
@@ -110,6 +111,8 @@ cd myContainer
     ```
 
     Lets try this again:
+
+    This time we will bind the docker host port 8000 to the internal port 80.
 
     ```docker
     docker run -it --name mycontainer -p 8000:80 mycontainer

@@ -68,6 +68,23 @@ docker push <imagename>:<tag>
 
 ### **Delete the image from the local cache**
 
+Before an image can be deleted, containers referencing the image must be
+stopped and deleted.
+
+Stop the container
+
+```docker
+docker stop <container>
+```
+
+Remove the container
+
+```docker
+docker rm <container>
+```
+
+Remove the image from the local registry.  Be sure to delete all references.
+
 ```docker
 docker image rm <imagename>:<tag>
 ```
